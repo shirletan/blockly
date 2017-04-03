@@ -17,11 +17,12 @@
     "name": "Neil Fraser"
   },
   "scripts": {
-    "test": "./node_modules/.bin/karma start  karma.conf.js --browsers Chrome"
+    "test": "ln -s -f ./node_modules/google-closure-library ../closure-library && ./node_modules/.bin/browserstack-runner"
   },
   "license": "Apache-2.0",
   "private": true,
   "devDependencies": {
+    "browserstack-runner": "^0.5.0",
     "google-closure-library": "^20170218.0.1",
     "jasmine": "^2.5.3",
     "jshint": "latest",

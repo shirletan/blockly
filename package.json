@@ -17,20 +17,14 @@
     "name": "Neil Fraser"
   },
   "scripts": {
-    "test": "./node_modules/.bin/karma start  karma.conf.js --browsers Chrome"
+     "lint": "jshint .",
+    "preinstall": "scripts/get_geckdriver.sh  && scripts/get_selenium.sh && scripts/get_chromedriver.sh && scripts/selenium_connect.sh &",
+    "test": "node tests/jsunit/test_runner.js"
   },
   "license": "Apache-2.0",
   "private": true,
   "devDependencies": {
-    "google-closure-library": "^20170218.0.1",
-    "jasmine": "^2.5.3",
-    "jshint": "latest",
-    "karma": "latest",
-    "karma-chrome-launcher": "latest",
-    "karma-cli": "latest",
-    "karma-closure": "^0.1.1",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-jasmine": "~0.3"
+    "jshint": "latest"
   },
   "jshintConfig": {
     "globalstrict": true,
@@ -45,5 +39,11 @@
     "sub": true,
     "undef": true,
     "unused": true
+  },
+  "dependencies": {
+    "install": "^0.8.8",
+    "npm": "^4.4.4",
+    "closure-library": "^1.43629075.2",
+    "webdriverio": "^4.6.2"
   }
 }

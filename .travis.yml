@@ -1,7 +1,7 @@
 language: node_js
 node_js:
 - "stable"
-sudo: false
+sudo: false 
 dist: trusty
 addons:
  apt:
@@ -24,7 +24,10 @@ script:
   - scripts/get_geckdriver.sh 
   - scripts/get_selenium.sh 
   - scripts/get_chromedriver.sh 
-  - scripts/selenium_connect.sh &
+  - ls -l
+  - scripts/connect3.sh &
+  - echo "check if selenum running"
+  - echo `ps -aef |grep selenium`
   - node tests/jsunit/test_runner.js
 
 os:

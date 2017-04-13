@@ -8,5 +8,7 @@ fi
 if [[ $os_name == 'Linux' ]]; then
   cd chromedriver  && curl -L https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip > tmp.zip &&  unzip -o tmp.zip && rm tmp.zip 
 elif [[ $os_name == 'Darwin' ]]; then
+  echo "in osx platform and trying to download chromedriver"
   cd chromedriver  &&  curl -L https://chromedriver.storage.googleapis.com/2.29/chromedriver_mac64.zip  | tar xz 
+  sleep 5
 fi

@@ -8,18 +8,17 @@ addons:
    sources:
      - google-chrome
    packages:
-     - "xvfb"
      - google-chrome-stable
-     - "freeglut3-dev"
-     -  "xutils-dev"
-     -  "libxi-dev"
-     -  "libxxf86vm-dev"
-     -  "x11proto-xf86vidmode-dev"
-     -  "mesa-utils"
-     -   "xvfb"
-     -   "libgl1-mesa-dri"
-     -  "libglapi-mesa"
-     -  "libosmesa6"
+     - freeglut3-dev
+     - xutils-dev
+     - libxi-dev
+     - libxxf86vm-dev
+     - x11proto-xf86vidmode-dev
+     - mesa-utils
+     - xvfb
+     - libgl1-mesa-dri
+     - libglapi-mesa
+     - libosmesa6
 
 before_install:
 - npm install google-closure-library

@@ -16,6 +16,7 @@ before_install:
 - ln -s $(npm root)/google-closure-library ../closure-library
 
 before_script:
+  - set -x
   - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then ( sh -e /etc/init.d/xvfb start )& fi

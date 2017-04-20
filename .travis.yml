@@ -18,8 +18,9 @@ before_install:
 before_script:
   - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-
+  - if ["${TRAVIS_OS_NAME}" = "lunix" ]; then (sh -e /etc/init.d/xvfb start )& fi
+  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then ( sudo Xvfb :99 -ac -screen 0 1024x768x8; echo ok )& fi
+  - sleep 3
 script:
   - set -x
   - npm test

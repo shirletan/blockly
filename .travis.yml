@@ -8,8 +8,8 @@ addons:
    sources:
      - google-chrome
    packages:
-    - "xvfb",
-     - google-chrome-stable
+    - "xvfb"
+    - google-chrome-stable
 
 before_install:
 - npm install google-closure-library

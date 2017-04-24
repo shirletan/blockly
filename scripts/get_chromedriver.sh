@@ -2,12 +2,8 @@
 os_name=`uname`
 chromedriver_dir="chromedriver"
 if [ ! -d $chromedriver_dir ]; then
-  mkdir $chromedriver_dir 
+  mkdir $chromedriver_dir
 fi
-
-#if [ -f $chromedriver_dir/chromedriver ]; then
-  #exit 0
-#fi
 
 if [[ $os_name == 'Linux' && ! -f $chromedriver_dir/chromedriver ]]; then
   cd chromedriver  && curl -L https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip > tmp.zip &&  unzip -o tmp.zip && rm tmp.zip 

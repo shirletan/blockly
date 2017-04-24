@@ -41,7 +41,6 @@ before_script:
 
 script:
   - set -x
-  - ls -l chromedriver
   - npm test 
 
 os:

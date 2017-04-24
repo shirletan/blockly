@@ -11,7 +11,5 @@ if [[ $os_name == 'Linux' && ! -f $chromedriver_dir/chromedriver ]]; then
   sleep 5
 elif [[ $os_name == 'Darwin' && ! -f $chromedriver_dir/chromedriver ]]; then
   cd chromedriver  &&  curl -L https://chromedriver.storage.googleapis.com/2.29/chromedriver_mac64.zip  | tar xz 
-  # wait until download finish
-  echo "chromdriver downloading..."
-  sleep 8
+  sleep 5
 fi

@@ -35,7 +35,7 @@ before_script:
   - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then ( export CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ) fi
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( export CHROME_BIN="/usr/bin/google-chrome" ) fi
 #  - \"$CHROME_BIN\" --version
-  - echo $CHROME_BIN
+  - echo "chrome path is ${CHROME_BIN}"
   - sleep 3
 
 script:

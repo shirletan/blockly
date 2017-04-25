@@ -30,7 +30,7 @@ before_install:
 before_script:
   - export DISPLAY=:99.0
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( sh -e /etc/init.d/xvfb start; export CHROME_BIN="/usr/bin/google-chrome"  )& fi
-  - script/osx_setup.sh
+  - script/setup_osx.sh
   - sleep 3
 
 script:

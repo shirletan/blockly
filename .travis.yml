@@ -5,8 +5,6 @@ sudo: required
 dist: trusty
 addons:
  apt:
-   sources:
-     - google-chrome
    packages:
      - google-chrome-stable
 
@@ -18,9 +16,9 @@ before_install:
 before_script:
   - export DISPLAY=:99.0
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( sh -e /etc/init.d/xvfb start; export CHROME_BIN="/usr/bin/google-chrome" )& fi
-  - ls -l ./scripts/setup_osx.sh
-  - ./scripts/setup_osx.sh
-  - sleep 3
+  - scripts/setup_osx.sh
+  - echo "sleeping"
+  - sleep 2 
 
 script:
   - set -x

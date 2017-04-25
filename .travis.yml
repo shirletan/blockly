@@ -33,7 +33,7 @@ before_script:
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( sh -e /etc/init.d/xvfb start )& fi
   - brew cask install google-chrome
   - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then ( sudo Xvfb :99 -ac -screen 0 1024x768x8; echo okkkkkkkkkkkkkk )& fi
-  - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then ( export CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ) fi
+  - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then ( export CHROME_BIN="/Applications/Google Chrome.app" ) fi
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( export CHROME_BIN="/usr/bin/google-chrome" ) fi
 #  - \"$CHROME_BIN\" --version
   - echo "chrome path is ${CHROME_BIN}"

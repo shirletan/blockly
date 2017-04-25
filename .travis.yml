@@ -25,14 +25,16 @@ before_install:
 # Symlink closure library
 - ln -s $(npm root)/google-closure-library ../closure-library
 
+
 before_script:
-  - export DISPLAY=:99.0
-  - echo "osname is ${TRAVIS_OS_NAME}"
-  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( sh -e /etc/init.d/xvfb start )& fi
-  - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then ( sudo Xvfb :99 -ac -screen 0 1024x768x8; echo okkkkkkkkkkkkkk )& fi
-  - export CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-  - "$CHROME_BIN" --version
-  - sleep 3
+- export DISPLAY=99.0
+- echo "osname is ${TRAVIS_OS_NAME}"
+- if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( sh -e /etc/init.d/xvfb start )& fi
+- if [ "${TRAVIS_OS_NAME}" == "osx" ]; then ( sudo Xvfb :99 -ac -screen 0 1024x768x8; echo okkkkkkkkkkkkkk )& fi
+- export CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+- "$CHROME_BIN" --version
+- sleep 3
+
 script:
   - set -x
   - npm test 

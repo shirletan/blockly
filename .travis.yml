@@ -9,28 +9,16 @@ addons:
      - google-chrome
    packages:
      - google-chrome-stable
-     - freeglut3-dev
-     - xutils-dev
-     - libxi-dev
-     - libxxf86vm-dev
-     - x11proto-xf86vidmode-dev
-     - mesa-utils
-     - xvfb
-     - libgl1-mesa-dri
-     - libglapi-mesa
-     - libosmesa6
 
 before_install:
 - npm install google-closure-library
 # Symlink closure library
 - ln -s $(npm root)/google-closure-library ../closure-library
 
-
-
 before_script:
   - export DISPLAY=:99.0
-  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( sh -e /etc/init.d/xvfb start; export CHROME_BIN="/usr/bin/google-chrome"  )& fi
-  - script/setup_osx.sh
+  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( sh -e /etc/init.d/xvfb start; export CHROME_BIN="/usr/bin/google-chrome" )& fi
+  - scripts/setup_osx.sh
   - sleep 3
 
 script:

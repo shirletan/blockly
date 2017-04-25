@@ -34,7 +34,8 @@ before_script:
   - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then ( sudo Xvfb :99 -ac -screen 0 1024x768x8; echo okkkkkkkkkkkkkk )& fi
   - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then ( export CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ) fi
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then ( export CHROME_BIN="/usr/bin/google-chrome" ) fi
-  #- ${CHROME_BIN} --version
+  - "$CHROME_BIN" --version
+  - echo $CHROME_BIN
   - sleep 3
 
 script:

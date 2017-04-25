@@ -11,6 +11,8 @@ var browser = webdriverio
     .remote(options)
     .init()
     .url("file://" + path + "/tests/jsunit/index.html").pause(3000);
+    //.url("http://qitan1.browserstack.com").pause(3000);
+
 
 
 browser

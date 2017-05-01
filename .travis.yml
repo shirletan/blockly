@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - "stable"
 sudo: required
-dist:trusty
+dist: trusty
 
 matrix:
   include: 

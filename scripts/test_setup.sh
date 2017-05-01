@@ -10,7 +10,6 @@ function check_command {
       EXIT_STATUS=$STATUS
       fi
    }
-
 check_command scripts/get_geckdriver.sh
 sleep 5
 check_command scripts/get_selenium.sh 

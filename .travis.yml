@@ -3,6 +3,7 @@ node_js:
 - "stable"
 
 matrix:
+include: 
   - os: linux
     dist: trusty
     sudo: required

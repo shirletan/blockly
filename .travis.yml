@@ -1,18 +1,18 @@
 language: node_js
-node_js:
-- "stable"
 sudo: required
 dist: trusty
 matrix:
   include: 
     - os: linux
       dist: trusty
+      node_js: stable
       sudo: required
       addons:
         apt:
           packages:
           - google-chrome-stable
     - os: osx
+      node_js: stable
       osx_image: xcode8.3
 
 before_install:
